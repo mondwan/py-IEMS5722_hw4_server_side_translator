@@ -16,7 +16,6 @@
 from flask import Flask
 from flask import request
 from flask import jsonify
-import json
 
 
 class MissingWordsQueryException(Exception):
@@ -121,8 +120,7 @@ if __name__ == "__main__":
     # Put default configuration if running from shell
     config({
         'DEBUG': False,
-        'SERVER_NAME': '0.0.0.0:8080',
     })
 
     # Kick things start
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=8080)
