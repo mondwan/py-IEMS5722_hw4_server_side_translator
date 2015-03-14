@@ -1,7 +1,7 @@
-IEMS5722-hw4-server\_side
+IEMS5722-hw4-server\_side\_translator
 ========================
 
-A server side program, written in python, which handle translation required by
+A server side translator, written in python, which handles translations required by
 assignment 4.
 
 ---
@@ -35,14 +35,14 @@ coverage report, and is very useful when writing tests to make sure your code is
 
 coverage will give errors when `nosetests` is run on an empty project - basically saying that there is no data.
 
-Documenting your project
+Documentation
 ------------------------
 
 Documentation is created via the [Sphinx](https://pypi.python.org/pypi/Sphinx) package. The docs live in the `docs` folder and use [RestructuredText](http://docutils.sourceforge.net/rst.html).
 
 All doc files should use the `.rst` extension.
 
-To generate html docs from your ReST source files
+To generate html docs
 
 	cd docs
 	make html
