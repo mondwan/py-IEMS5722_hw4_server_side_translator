@@ -1,9 +1,8 @@
-python-seed
-===========
+IEMS5722-hw4-server\_side
+========================
 
-Python seed project with requirements, tests, docs set up - opinions included
-
-You can use this piecemeal or clone it to start new projects
+A server side program, written in python, which handle translation required by
+assignment 4.
 
 ---
 
@@ -36,37 +35,6 @@ coverage report, and is very useful when writing tests to make sure your code is
 
 coverage will give errors when `nosetests` is run on an empty project - basically saying that there is no data.
 
-Linting your Project
---------------------
-
-Linting your project can improve your code quality and readability, as well as prevent some types of bugs and design anti-patterns.
-
-Run [pylint](https://pypi.python.org/pypi/pylint) on your project with
-
-	pylint -f parseable *.py tests --rcfile=.pylintrc | tee test_results/pylint.out
-	
-You can then check `test_results/pylint.out` for any violations.
-
-Specific options for pylint are configured in `.pylintrc`.
-
-You can also run [flake8](https://pypi.python.org/pypi/flake8) against your project with
-
-	flake8 myapp
-	
-where myapp is any directory or Python module.
-
-flake8 does 3 things: 
-
-* Runs [pep8](https://pypi.python.org/pypi/pep8). pep8 is similar to pylint, some people prefer it.
-* Runs [PyFlakes](https://pypi.python.org/pypi/pyflakes). This does some static analysis and detects potential errors.
-* Optionally runs a McCabe complexity checker to report functions with complexity above a specified limit.
-
-To enable the McCabe check, add this arg to your flake8 run
-
-	--max-complexity 10
-	
-where 10 is the number you set.
-
 Documenting your project
 ------------------------
 
@@ -94,14 +62,3 @@ Three plugins are already enabled:
 * [Primer](http://docutils.sourceforge.net/docs/user/rst/quickstart.html)
 * [User Reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
 * [Cheat Sheet](http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt)
-
-3rd Party Packages
-------------------
-
-All packages that your project needs to run are listed in `requirements.txt`.
-
-Any packages that are used only for development or build are listed in `requirements_dev.txt`.
-
-You can install packages from both with
-
-	pip install -r requirements.txt; pip install -r requirements_dev.txt
