@@ -154,3 +154,36 @@ class TestSequenceFunctions(unittest.TestCase):
         actual_message = actual_data['message']
         self.assertEqual(u'Translation error for word |a|', actual_message)
         self.assertEqual(0, len(actual_output))
+
+    def test_translate_URL_encoded_multiple_word(self):
+        """
+        It should able to translate URL encoded string
+        """
+        input_words = [
+            'one%20two%20three%20four',
+            'five%20six%20seven%20eight',
+            'nine%20ten',
+            'ten%20one%20two',
+            'three%20seven%20six',
+            'nine%20ten%20zero',
+        ]
+
+        expect_outputs = [
+            u'一 二 三 四',
+            u'五 六 七 八',
+            u'九 十',
+            u'十 一 二',
+            u'三 七 六',
+            u'九 十 零',
+        ]
+
+        for index, word in enumerate(input_words):
+            # print('word=%s' % word)
+            ret = self.client.get('/?words=%s' % word)
+
+            expect_output = expect_outputs[index]
+            actual_data = json.loads(ret.data)
+            actual_output = actual_data['output']
+            actual_message = actual_data['message']
+            self.assertEqual(u'OK', actual_message)
+            self.assertEqual(expect_output, actual_output)
