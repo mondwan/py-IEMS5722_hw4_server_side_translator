@@ -51,10 +51,6 @@ def translate():
     A handler for translating given english word which about digit to chinese
     character
 
-    Attribute:
-
-    - `words`: Array of string
-
     Return:
 
     - `JSON`
