@@ -6,6 +6,12 @@ assignment 4.
 
 ---
 
+How to run the server
+---------------------
+
+    $> cd PROJECT_ROOT
+    $> python translator/server.py
+
 Running Tests
 -------------
 
