@@ -116,6 +116,7 @@ if __name__ == "__main__":
     # Put default configuration if running from shell
     config({
         'DEBUG': False,
+        'JSONIFY_PRETTYPRINT_REGULAR': False,
     })
 
     # Kick things start
